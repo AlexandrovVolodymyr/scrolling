@@ -1,0 +1,44 @@
+@import 'vars';
+
+.page {
+  height: 100vh;
+  overflow: hidden;
+
+  &__viewport {
+    //width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform .3s linear;
+  }
+
+  .item {
+    flex: 0 0 100vw;
+    max-width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid red;
+    .image {
+      height: 100%;
+      display: flex;
+    }
+    .image.first {
+      flex-basis: $width / 2;
+      max-width: $width / 2;
+      height: 50%;
+      margin-top: auto;
+      //transform: translateX(55%);
+    }
+    .image.second {
+      flex-basis: $width;
+      max-width: $width;
+    }
+    .image.third {
+      flex-basis: $width / 3;
+      max-width: $width / 3;
+      height: 33%;
+      margin-top: auto;
+      //transform: translateX(-55%);
+    }
+  }
+}
